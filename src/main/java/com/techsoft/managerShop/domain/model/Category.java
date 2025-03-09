@@ -1,5 +1,6 @@
 package com.techsoft.managerShop.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,5 +24,6 @@ public class Category {
 
     @ManyToOne
     @JoinColumn(name = "category_default_id")
+    @JsonBackReference
     private Category categoryDefault;
 }
